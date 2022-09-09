@@ -4,7 +4,7 @@ import { FaShoppingCart } from 'react-icons/fa'
 import './Navbar.css'
 
 const Navbar = () => {
-    const [toggle, setToggle] = useState(true)
+    const [toggle, setToggle] = useState(false)
 
     const menuToggle = () => {
         setToggle(!toggle)
