@@ -1,0 +1,125 @@
+.categories__container {
+    background-color: #D2E1E4;
+    width: 100%;
+    padding: 5em;
+    height: 100%;
+}
+
+.categories__title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "grid1 grid2 grid4"
+                        "grid1 grid3 grid4";
+    grid-gap: 10px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.container__grid1 {
+    grid-area: grid1;
+    position: relative;
+}
+
+.container__grid1:hover img {
+    box-shadow: 0 2px 50px #23232333;
+    opacity: 0.6;
+}
+
+.container__grid2 {
+    grid-area: grid2;
+    position: relative;
+}
+
+.container__grid2:hover img {
+    box-shadow: 0 2px 50px #23232333;
+    opacity: 0.6;
+}
+
+.container__grid3 {
+    grid-area: grid3;
+    position: relative;
+}
+
+.container__grid3:hover img {
+    box-shadow: 0 2px 50px #23232333;
+    opacity: 0.6;
+}
+
+.container__grid4 {
+    grid-area: grid4;
+    position: relative;
+    transition: all .5s;
+    transition: box-shadow .3s ease, transform .2s ease;
+}
+
+.container__grid4:hover img {
+    box-shadow: 0 2px 50px #23232333;
+    opacity: 0.6;
+}
+
+.btn__grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: #000000;
+    border: 1px solid #FFFFFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.btn__grid:hover {
+    background-color: #212529;
+}
+
+@media (max-width:1154px) {
+    .categories__container {
+        padding: 1em;
+    }
+}
+
+@media (max-width:1154px) {
+    .categories__container {
+        padding: 1em;
+    }
+    .categories {
+        background-color: #D2E1E4;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "grid1 grid2"
+                            "grid3 grid4";
+        grid-gap: 10px;
+    }
+}
+
+@media (max-width:540px) {
+    .categories__container {
+        padding: 1em;
+    }
+    .categories {
+        background-color: #D2E1E4;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "grid1"
+                            "grid2"
+                            "grid3"
+                            "grid4";
+        grid-gap: 10px;
+    }
+}
