@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
+import { productsAction } from '../../store/products-slice'
 
 import Navbar from '../../layouts/Navbar'
 import ProductItems from './ProductItems'
@@ -8,12 +10,13 @@ import CategoryList from '../categories/CategoryList'
 import './Products.css'
 
 const Products = () => {
-    const [products, setProducts] = useState([]) 
+    const dispatch = useDispatch()
+    const products = useSelector(state => state.product.products)
 
     const getProducts = () => {
         axios.get('https://fakestoreapi.com/products') 
             .then(({data}) => {
-                setProducts(data)
+                dispatch(productsAction.setProducts(data))
             }).catch((error) => console.log(error.response))
     }
 
