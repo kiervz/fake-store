@@ -1,5 +1,5 @@
 .hero {
-    background-image: url('../assets/images/bg.jpg');
+    background-image: url('../../assets/images/bg.jpg');
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -116,7 +116,7 @@
 @media (max-width:768px) {
     .hero {
         padding: 0 2em;
-        background-image: url('../assets/images/bg.jpg');
+        background-image: url('../../assets/images/bg.jpg');
         width: 100%;
         background-size: cover;
         background-position: top 50% right 70%;
