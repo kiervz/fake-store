@@ -1,8 +1,12 @@
+import Home from "./layouts/Home";
+import Navbar from "./layouts/Navbar";
+
 const App = () => {
     return (
-        <div>
-          Hello, React!
-        </div>
+        <>
+            <Navbar /> 
+            <Home />
+        </>
     );
 }
 
