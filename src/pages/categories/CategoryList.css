@@ -20,3 +20,7 @@
 .category__text:hover {
     color: #292d31;
 }
+
+.active {
+    background-color: #EAEEF4;
+}
