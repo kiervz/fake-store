@@ -1,0 +1,34 @@
+.card {
+    background-color: #ffffff;
+    transition: all .5s;
+    transition: box-shadow .3s ease, transform .2s ease;
+    box-shadow: 0 8px 50px #23232333;
+}
+
+.card > .card__image {
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat repeat;
+}
+
+.card__title {
+    padding: 10px;
+    font-size: 14px;
+    font-weight:600;
+}
+
+.card__price {
+    padding: 10px;
+    font-size: 14px;
+    font-weight:600;
+    color: #6C7591;
+}
+
+
+@media (max-width: 650px) {
+    .card > .card__image {
+        height: 400px;
+        width: 100%;
+        background-repeat: no-repeat repeat;
+    }
+}

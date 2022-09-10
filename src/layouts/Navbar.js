@@ -14,10 +14,10 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav className="nav container">
+            <nav className="navigation container__nav">
                 <Link to="/" className="logo">KVEY STORE</Link>
 
-                <ul className={`navbar ${toggle ? 'open-menu' : 'close-menu'}`}>
+                <ul className={`navigationbar ${toggle ? 'open-menu' : 'close-menu'}`}>
                     <li><Link to="/products" className="nav-link">Products</Link></li>
                     <li><Link to="/register" className="nav-link">Register</Link></li>
                     <li><Link to="/login" className="nav-link">Sign In</Link></li>

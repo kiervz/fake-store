@@ -82,6 +82,7 @@ img {
 
 .btn__grid:hover {
     background-color: #212529;
+    color: white;
 }
 
 @media (max-width:1154px) {

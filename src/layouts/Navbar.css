@@ -6,9 +6,10 @@
     font-size: 1em;
     position: relative;
     text-transform: uppercase;
+    color: #000000;
 }
 
-.container {
+.container__nav {
     margin: auto;
     width: min(90%, 1299px);
 }
@@ -22,30 +23,39 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
   
-.nav {
+.navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
 }
   
-.navbar {
+.navigationbar {
     display: flex;
     align-items: center;
     column-gap: 1.5em;
     z-index: 100;
+    margin-top: 10px;
+}
+
+.navigationbar li a {
+    padding-right: 20px;
 }
   
 .nav-link {
     font-size: 1rem;
-    padding: 4px 8px;
+    padding: 4px 20px;
     border-radius: 0.2rem;
 }
-  
+
 .nav-link:hover {
     color: #000000;
 }
-  
+
+.nav-link > li  {
+    padding-right: 10px;
+}
+
 /** Menu Icon */
 .menu-icon {
     display: none;
@@ -84,7 +94,7 @@ header {
         display: flex;
     }
     
-    .navbar {
+    .navigationbar {
         visibility: visible;
         top: 0;
         width: min(75vw, 400px);
@@ -98,7 +108,7 @@ header {
         box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     }
     
-    .navbar, .open-menu {
+    .navigationbar, .open-menu {
         right: 0;
         opacity: 1;
         transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
