@@ -2,7 +2,6 @@
     background-color: #ffffff;
     transition: all .5s;
     transition: box-shadow .3s ease, transform .2s ease;
-    box-shadow: 0 8px 50px #23232333;
 }
 
 .card > .card__image {

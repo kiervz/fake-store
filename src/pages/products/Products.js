@@ -3,17 +3,17 @@ import axios from 'axios'
 
 import Navbar from '../../layouts/Navbar'
 import ProductItems from './ProductItems'
+import CategoryList from '../categories/CategoryList'
 
 import './Products.css'
 
 const Products = () => {
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]) 
 
     const getProducts = () => {
         axios.get('https://fakestoreapi.com/products?limit=10') 
             .then(({data}) => {
                 setProducts(data)
-                console.log(data);
             }).catch((error) => console.log(error.response))
     }
 
@@ -26,7 +26,7 @@ const Products = () => {
             <Navbar />
             <div className='row container-fluid'>
                 <div className='col-md-3'>
-                    
+                    <CategoryList />
                 </div>
                 <div className='col-md-9'>
                     <div className='products'>

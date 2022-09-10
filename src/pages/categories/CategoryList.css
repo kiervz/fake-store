@@ -1,0 +1,23 @@
+.category {
+    margin-top: 20px;
+    background-color: white;
+}
+
+.category__list {
+    padding-left: 0px;
+}
+
+.category__item {
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.category__text {
+    color: black;
+    text-transform: capitalize;
+}
+
+.category__text:hover {
+    color: #292d31;
+}

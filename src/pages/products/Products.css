@@ -1,14 +1,13 @@
 .products {
     background-color: #ffffff;
     margin-top: 20px;
-    padding: 2em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1em;
     grid-auto-flow: dense;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1265px) {
     .products {
         grid-template-columns: repeat(3, 1fr);
     }

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 import Clothes from '../../assets/images/clothes.jpg'
 import Headphone from '../../assets/images/headphone.jpg'
@@ -10,18 +10,7 @@ import Watches from '../../assets/images/watches.jpg'
 import './Categories.css'
 
 const Categories = () => {
-    const [categories, setCategories] = useState()
-
-    const getCategories = () => {
-        axios.get('https://fakestoreapi.com/products/categories')
-            .then(({data}) => {
-                setCategories(data);
-            }).catch((error) => console.log(error.response))
-    }
-
-    useEffect(() => {
-        getCategories()
-    }, [])
+    const categories = useSelector(state => state.category.categories)
 
     return (
         <div className='categories__container'>
