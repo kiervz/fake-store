@@ -1,33 +1,120 @@
-.card {
+.single__product {
     background-color: #ffffff;
-    transition: all .5s;
-    transition: box-shadow .3s ease, transform .2s ease;
+    margin-bottom: 26px;
 }
 
-.card > .card__image {
-    height: 300px;
+.single__product .image__part {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.single__product .image__part::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
     width: 100%;
-    background-repeat: no-repeat repeat;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
 }
 
-.card__title {
+.single__product:hover .image__part::before {
+    transform: scale(1.2, 1.2) rotate(5deg);
+}
+
+.single__product .image__part::before {
+    background-size: cover;
+    transition: all 0.3s;
+}
+
+.single__product .image__part .discount,
+.single__product .image__part .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.single__product .image__part .new {
+    left: 0;
+    background-color: #444444;
+}
+
+.single__product .image__part ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.single__product:hover .image__part ul {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.single__product .image__part ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.single__product .image__part ul li div {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.single__product .image__part ul li div:hover {
+    color: #000000;
+}
+
+.text__part {
     padding: 10px;
-    font-size: 14px;
-    font-weight:600;
+}
+.single__product .text__part .product__title {
+    font-size: 1rem;
 }
 
-.card__price {
-    padding: 10px;
-    font-size: 14px;
-    font-weight:600;
-    color: #6C7591;
+.single__product .text__part h4 {
+    display: inline-block;
+    font-size: 1rem;
 }
 
+.single__product .text__part .product__old__price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
 
-@media (max-width: 650px) {
-    .card > .card__image {
-        height: 400px;
-        width: 100%;
-        background-repeat: no-repeat repeat;
-    }
+.single__product .text__part .product__old__price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
 }

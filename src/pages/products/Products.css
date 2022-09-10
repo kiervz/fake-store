@@ -1,31 +1,7 @@
 .products {
-    background-color: #ffffff;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1em;
-    grid-auto-flow: dense;
+    background-color: #E0E0E0;
 }
 
-@media (max-width: 1265px) {
-    .products {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 950px) {
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-    }
-} 
-
-@media (max-width: 850px) {
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 650px) {
-    .products {
-        grid-template-columns: repeat(1, 1fr);
-    }
+.mt-20 {
+    margin-top: 20px!important;
 }
