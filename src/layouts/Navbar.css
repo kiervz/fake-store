@@ -19,6 +19,7 @@ header {
     width: 100%;
     z-index: 5;
     background-color: #EAEEF4;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
   
 .nav {
@@ -84,7 +85,6 @@ header {
     
     .navbar {
         visibility: visible;
-        opacity: 1;
         top: 0;
         width: min(75vw, 400px);
         height: 100vh;
@@ -95,11 +95,12 @@ header {
         position: fixed;
         padding: 70px 20px;
         box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     
-    .navbar,.open-menu {
+    .navbar, .open-menu {
         right: 0;
+        opacity: 1;
+        transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     .close-menu {

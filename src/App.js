@@ -1,12 +1,21 @@
-import Home from "./layouts/Home";
-import Navbar from "./layouts/Navbar";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+import Home from "./pages/Home";
+import Products from './pages/products/Products';
 
 const App = () => {
     return (
-        <>
-            <Navbar /> 
-            <Home />
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/products" element={<Products />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
