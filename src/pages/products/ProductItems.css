@@ -1,6 +1,15 @@
 .single__product {
     background-color: #ffffff;
     margin-bottom: 26px;
+    cursor: pointer;
+}
+
+.product__title {
+    color: #4E4E4E;
+}
+
+.product__price {
+    color: #4E4E4E;
 }
 
 .single__product .image__part {
@@ -23,12 +32,11 @@
 }
 
 .single__product:hover .image__part::before {
-    transform: scale(1.2, 1.2) rotate(5deg);
+    transform: scale(1.2,1.2) rotate(5deg);
 }
 
-.single__product .image__part::before {
-    background-size: cover;
-    transition: all 0.3s;
+.product__title:hover {
+    color: #000000;
 }
 
 .single__product .image__part .discount,
