@@ -47,3 +47,10 @@ a {
 li {
   list-style:none;
 }
+
+.btn__dark {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  width: 100%;
+}
