@@ -9,6 +9,10 @@
     color: #000000;
 }
 
+.logo:hover {
+    color: #000000;
+}
+
 .container__nav {
     margin: auto;
     width: min(90%, 1299px);
