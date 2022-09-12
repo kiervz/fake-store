@@ -8,6 +8,7 @@ import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import Home from "./pages/Home";
 import Products from './pages/products/Products';
+import Product from './pages/products/Product';
 
 const App = () => {
     const dispatch = useDispatch()
@@ -29,6 +30,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/category/:slug" element={<Products />} />
+                <Route path="/product/:id" element={<Product />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
             </Routes>

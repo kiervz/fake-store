@@ -4,11 +4,11 @@
     cursor: pointer;
 }
 
-.product__title {
+.product__title, .product__old__price {
     color: #4E4E4E;
 }
 
-.product__price {
+.product__price, .product__old__price{
     color: #4E4E4E;
 }
 
