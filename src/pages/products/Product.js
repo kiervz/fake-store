@@ -15,7 +15,9 @@ import './Product.css'
 
 const Product = () => {
     const param = useParams()
+    const images = [1, 2, 3, 4];
     const [product, setProduct] = useState({})
+    const [quantity, setQuantity] = useState(0)
     const [imagesNavSlider, setImagesNavSlider] = useState(null);
 
     const getProduct = () => {
@@ -23,6 +25,18 @@ const Product = () => {
             .then(({data}) => {
                 setProduct(data);
             }).catch((error) => console.log(error.response))
+    }
+
+    const incrementQty = () => {
+        if (quantity < 20) setQuantity(quantity => quantity += 1)
+    }
+    
+    const decrementtQty = () => {
+        if (quantity > 0) setQuantity(quantity => quantity -= 1)
+    }
+
+    const onAddToCart = () => {
+        console.log(quantity);
     }
 
     useEffect(() => {
@@ -59,26 +73,13 @@ const Product = () => {
                                                 }}
                                                 modules={[Navigation, Thumbs]}
                                             >
-                                                <SwiperSlide key={1}>
-                                                    <div className='slider__image'>
-                                                        <img src={product.image} alt='' />
-                                                    </div>
-                                                </SwiperSlide>
-                                                <SwiperSlide key={2}>
-                                                    <div className='slider__image'>
-                                                        <img src={product.image} alt='' />
-                                                    </div>
-                                                </SwiperSlide>
-                                                <SwiperSlide key={3}>
-                                                    <div className='slider__image'>
-                                                        <img src={product.image} alt='' />
-                                                    </div>
-                                                </SwiperSlide>
-                                                <SwiperSlide key={4}>
-                                                    <div className='slider__image'>
-                                                        <img src={product.image} alt='' />
-                                                    </div>
-                                                </SwiperSlide>
+                                                {images.map(image => (
+                                                    <SwiperSlide key={image}>
+                                                        <div className='slider__image'>
+                                                            <img src={product.image} alt='' />
+                                                        </div>
+                                                    </SwiperSlide>
+                                                ))}
                                             </Swiper>
                                         </div>
                                     </div>
@@ -101,26 +102,13 @@ const Product = () => {
                                         className='swiper-container2'
                                         modules={[Navigation, Thumbs]}
                                         >
-                                        <SwiperSlide key={1}>
-                                            <div className='slider__image'>
-                                                <img src={product.image} alt='' />
-                                            </div>
-                                        </SwiperSlide>
-                                        <SwiperSlide key={2}>
-                                            <div className='slider__image'>
-                                                <img src={product.image} alt='' />
-                                            </div>
-                                        </SwiperSlide>
-                                        <SwiperSlide key={3}>
-                                            <div className='slider__image'>
-                                                <img src={product.image} alt='' />
-                                            </div>
-                                        </SwiperSlide>
-                                        <SwiperSlide key={4}>
-                                            <div className='slider__image'>
-                                                <img src={product.image} alt='' />
-                                            </div>
-                                        </SwiperSlide>
+                                        {images.map(image => (
+                                            <SwiperSlide key={image}>
+                                                <div className='slider__image'>
+                                                    <img src={product.image} alt='' />
+                                                </div>
+                                            </SwiperSlide>
+                                        ))}
                                     </Swiper>
                                 </div>
                             </div>
@@ -135,18 +123,22 @@ const Product = () => {
                                     <div className='border d-flex align-items-center justify-content-between py-1 px-3 bg-white border-white'>
                                         <span className='small text-uppercase text-gray mr-4'>Quantity</span>
                                         <div className='quantity'>
-                                            <button>
+                                            <button onClick={decrementtQty}>
                                                 <FaCaretLeft />
                                             </button>
-                                            <input className='form-control border-0 shadow-0 p-0' type='text'/>
-                                            <button>
+                                            <input 
+                                                className='form-control border-0 shadow-0 p-0' 
+                                                type='text' 
+                                                value={quantity}
+                                                onChange={() => setQuantity(quantity)}/>
+                                            <button onClick={incrementQty}>
                                                 <FaCaretRight />    
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                                 <div className='col-sm-3 pl-sm-0'>
-                                    <button className='btn__dark'>Add to cart</button>
+                                    <button className='btn__dark' onClick={onAddToCart}>Add to cart</button>
                                 </div>
                             </div>
                             

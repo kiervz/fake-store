@@ -28,10 +28,10 @@ const Products = () => {
         <div className='products'>
             <Navbar />
             <div className='row container-fluid mt-20'>
-                <div className='col-md-3'>
+                <div className='col-lg-2 col-md-3'>
                     <CategoryList />
                 </div>
-                <div className='col-md-9'>
+                <div className='col-lg-10 col-md-9'>
                     <div className='row'>
                         { products.map(product => <ProductItems product={product} key={product.id} />) }
                     </div>

@@ -5,14 +5,12 @@ import './ProductItems.css'
 
 const ProductItems = ({product}) => {
     return (
-        <div className="col-md-6 col-lg-6 col-xl-4">
+        <div className="col-lg-4 col-md-6 col-xl-4">
             <Link className="single__product" to={`/product/${product.id}`}>
-                <div className="image__part" style={
-                        {
+                <div className="image__part" style={{
                             background: `url(${product.image}) no-repeat center`,
                             backgroundSize: 'cover'
-                        }
-                    }>
+                        }}>
                     <ul>
                         <li><div><FaShoppingCart /></div></li>
                         <li><div><FaHeart /></div></li>
